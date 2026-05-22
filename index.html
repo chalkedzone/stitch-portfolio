@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevCreative | Full-Stack Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#191c1e",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#eeefff",
+                    "inverse-surface": "#2d3133",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-container": "#ffede3",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#3cddc7",
+                    "background": "#f7f9fb",
+                    "on-secondary-fixed": "#00201c",
+                    "inverse-primary": "#b4c5ff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdcc5",
+                    "on-secondary-fixed-variant": "#005047",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#006b5f",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-surface-variant": "#434655",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "surface": "#f7f9fb",
+                    "surface-container": "#eceef0",
+                    "secondary-fixed": "#62fae3",
+                    "primary-fixed": "#dbe1ff",
+                    "primary": "#004ac6",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "outline": "#737686",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#301400",
+                    "outline-variant": "#c3c6d7",
+                    "tertiary": "#864300",
+                    "surface-tint": "#0053db",
+                    "on-tertiary-fixed-variant": "#713700",
+                    "primary-container": "#2563eb",
+                    "on-surface": "#191c1e",
+                    "surface-container-low": "#f2f4f6",
+                    "tertiary-container": "#aa5700",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-bright": "#f7f9fb",
+                    "tertiary-fixed-dim": "#ffb783",
+                    "secondary-container": "#62fae3",
+                    "on-primary-fixed": "#00174b",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-secondary-container": "#007165",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "stack-lg": "48px",
+                    "stack-sm": "12px",
+                    "container-max": "1200px",
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "label-mono": ["JetBrains Mono"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-mono": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0 4px 20px rgba(0, 74, 198, 0.04);
+        }
+        .card-hover:hover {
+            box-shadow: 0 8px 30px rgba(0, 74, 198, 0.08);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 rounded-full mt-4 bg-surface/80 dark:bg-on-background/80 backdrop-blur-md shadow-sm hover:shadow-md transition-shadow duration-300 max-w-container-max mx-auto px-margin-desktop py-4 flex justify-between items-center">
+<div class="font-display-lg text-headline-md font-extrabold text-primary dark:text-primary-fixed-dim">DevCreative</div>
+<nav class="hidden md:flex items-center gap-gutter">
+
+<button aria-label="menu" class="hamburger"></button>   
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 transition-colors duration-200" href="#about">About Me</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#projects">Projects</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+<a href="./Enrico_San Juan_Resume.pdf" target="_blank" class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold scale-95 active:scale-90 transition-transform shadow-sm hover:shadow-md">
+            Resume
+</a>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Hero Section -->
+<section class="py-stack-lg grid grid-cols-1 md:grid-cols-2 gap-gutter items-center min-h-[716px]" id="about">
+<div class="space-y-stack-md order-2 md:order-1">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-on-background animate-fade-in">
+                    Building digital experiences with <span class="text-primary">code</span> &amp; <span class="text-secondary">creativity</span>.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    I'm a full-stack developer who balances technical rigor with a playful, inventive mindset. I transform complex problems into elegant, squishy, and user-centric digital products.
+                </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold shadow-sm hover:shadow-md transition-all active:scale-95">Get in Touch</button>
+<button class="border-2 border-secondary text-secondary px-8 py-3 rounded-full font-bold hover:bg-secondary-container transition-all active:scale-95">View Work</button>
+</div>
+</div>
+<div class="flex justify-center md:justify-end order-1 md:order-2">
+<div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-primary-fixed shadow-xl ring-8 ring-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A professional yet friendly portrait of a modern software developer in a brightly lit studio. The individual is wearing a minimalist dark shirt, smiling warmly at the camera. The background is a soft, out-of-focus tech environment with subtle hints of blue and teal ambient lighting, reflecting a creative and trustworthy brand persona. The lighting is high-key and flattering, emphasizing a polished and approachable aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWaMrIGWURzhuGiWpkZhENe8n78C39xpLBgeIqMpA1VoEhwa-Cc63woXd-2dPh5PFIrZU5q6A4czN08L62v2dxDiGntJE8csA9ZI2EkNLXUY5JR3BlbmG3kwG8XVW086pdo8s3zYZVRfdd96LrtQ9_dKOMAl-AYRa1KypUuiltrGupTv7MuX_rvFsutknc6iQSm1K_wl1c3a-lLv3iSXdPNaDfjtua3u-aSADLNQ4Nkw8GaDLmdFKhFo5WC-W9J_8SZm9Sr1-ALKs"/>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-stack-lg space-y-stack-md" id="projects">
+<div class="text-center space-y-2">
+<span class="font-label-mono text-label-mono bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full">PORTFOLIO</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Projects</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Project Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow card-hover transition-all duration-300 border-b-2 border-transparent hover:border-primary">
+<div class="aspect-video bg-surface-variant relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="A high-fidelity mockup of a vibrant e-commerce dashboard showing sales analytics and product inventories. The UI design is clean and modern, featuring rounded corners, subtle shadows, and a primary blue color palette. The scene is illuminated by soft, bright natural light, creating a professional and trustworthy atmosphere. Minimalist data visualizations are rendered with precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp8nEEJDOyQhanQEjSdIYGufSw4mfig4x0b3rp6WOGJ3aGu5oBvp9tgvKqIMIaBOiCS9kszu-XtgOBtfZo2r-ofh0bWitbZdAiiyoyw3uAUfy9bIDdNh6j4q77isfNstpTkcVj7rbd63wk8VLO998pEWIFI0Y7SZkbW3BFF0fCmcQwxoFJDYDTTG4sPpotHGQh5K_gwcJX0q5hLo1oEqmontKcbOF6jOpa5IZOXR4KDy8LcyKmySQI0qFamsseJav4I8-sGuPLWSA"/>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="font-headline-md text-headline-md text-on-surface">E-commerce Platform</h3>
+<p class="text-on-surface-variant font-body-md">A full-scale online marketplace with real-time inventory tracking and integrated stripe payments.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-mono text-label-mono bg-primary/10 text-primary px-2 py-1 rounded">React</span>
+<span class="font-label-mono text-label-mono bg-primary/10 text-primary px-2 py-1 rounded">Node.js</span>
+<span class="font-label-mono text-label-mono bg-primary/10 text-primary px-2 py-1 rounded">PostgreSQL</span>
+</div>
+<button class="w-full py-2 bg-surface-container-high text-primary font-bold rounded-lg hover:bg-primary hover:text-on-primary transition-colors active:scale-95">View Project</button>
+</div>
+</article>
+<!-- Project Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow card-hover transition-all duration-300 border-b-2 border-transparent hover:border-primary">
+<div class="aspect-video bg-surface-variant relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="A sophisticated AI-powered dashboard featuring complex data grids and interactive charts in a light mode interface. The visual style is minimal and airy, using generous whitespace and a calming teal and blue color scheme. Soft ambient lighting washes over the digital interface, highlighting the tactile softness and modern geometry of the cards and components." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjI5mbq3sKJrGQmK9KWzW1al918JLl7YS7WCvZ6SNYJzIvTGnIQw_uH93yA0VvZNvXc_-IE8PzNDytT_vPLhbPS7AHRX5VoD0iaHlWav2s5ZkKeld5KTjvbUuEr1xt6UzFckYhEcXEWFj1zyN-pX3U2qtTS3zHQAgJ4xJpIzkyBaAlwsVFq-lFjN1AVHFQbwZqg9h8tWFB1apy03sM-9nwgSlU7zpTqm_ciGe7PUERIWXzJJ0ZOH4C6njr2JXuw0kZrWhA13LMA1I"/>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="font-headline-md text-headline-md text-on-surface">AI Dashboard</h3>
+<p class="text-on-surface-variant font-body-md">Custom analytics suite leveraging GPT-4 for automated insights and trend forecasting.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-mono text-label-mono bg-primary/10 text-primary px-2 py-1 rounded">Python</span>
+<span class="font-label-mono text-label-mono bg-primary/10 text-primary px-2 py-1 rounded">Next.js</span>
+<span class="font-label-mono text-label-mono bg-primary/10 text-primary px-2 py-1 rounded">Tailwind</span>
+</div>
+<button class="w-full py-2 bg-surface-container-high text-primary font-bold rounded-lg hover:bg-primary hover:text-on-primary transition-colors active:scale-95">View Project</button>
+</div>
+</article>
+<!-- Project Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow card-hover transition-all duration-300 border-b-2 border-transparent hover:border-primary">
+<div class="aspect-video bg-surface-variant relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="A colorful and engaging mobile application interface displayed on a sleek smartphone screen. The app features a social networking layout with rounded profile icons, chat bubbles, and vibrant interactions. The overall aesthetic is energetic and playful, utilizing soft gradients and playful shadows to create a tactile, squishy feel that invite user engagement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ_7FrUl6o-tJT3MfPWo7MzTe36WCxxe28F-_qPAVinops1slG0Fvt5FYqSspZ5fnbhq-9o_unoOQINLlQ2aOsL1WkppaSZlB2_hUyYDs9OT6FxBRFhfqymHmwjH6i38TBclqzEHvLS9mVOQgvQqN9PiRmg-kxi5EnIMB-kF9G95ITAObR4c3O4FLY7IedG2Nzfli4TZb5Tkul1Q2Tyfwr4a1uFh9wKOg1F3t-uEV04azs5BiC-PYqOYFZleXt25U8zs_B5dov1UY"/>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="font-headline-md text-headline-md text-on-surface">Social App</h3>
+<p class="text-on-surface-variant font-body-md">Real-time collaboration tool with WebSocket integration for seamless messaging.</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-mono text-label-mono bg-primary/10 text-primary px-2 py-1 rounded">Socket.io</span>
+<span class="font-label-mono text-label-mono bg-primary/10 text-primary px-2 py-1 rounded">Redis</span>
+<span class="font-label-mono text-label-mono bg-primary/10 text-primary px-2 py-1 rounded">Express</span>
+</div>
+<button class="w-full py-2 bg-surface-container-high text-primary font-bold rounded-lg hover:bg-primary hover:text-on-primary transition-colors active:scale-95">View Project</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-stack-lg space-y-stack-md" id="contact">
+<div class="text-center space-y-2">
+<span class="font-label-mono text-label-mono bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full">GET IN TOUCH</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Contact Me</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Contact Form -->
+<div class="bg-surface-container-low p-margin-mobile md:p-8 rounded-xl space-y-6">
+<h3 class="font-headline-md text-headline-md text-on-surface">Let's build something cool</h3>
+<form class="space-y-4">
+<div class="space-y-1">
+<label class="font-label-mono text-sm uppercase text-on-surface-variant ml-2">Name:</label>
+<input class="w-full px-4 py-3 rounded-lg bg-white border-none focus:ring-2 focus:ring-primary shadow-sm outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-mono text-sm uppercase text-on-surface-variant ml-2">Email:</label>
+<input class="w-full px-4 py-3 rounded-lg bg-white border-none focus:ring-2 focus:ring-primary shadow-sm outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-mono text-sm uppercase text-on-surface-variant ml-2">Message:</label>
+<textarea class="w-full px-4 py-3 rounded-lg bg-white border-none focus:ring-2 focus:ring-primary shadow-sm outline-none transition-all resize-none" placeholder="Tell me about your project..." rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-lg shadow-md hover:shadow-lg transition-all active:scale-[0.98]" type="submit">Send Message</button>
+</form>
+<div class="pt-6 border-t border-outline-variant flex gap-4">
+<a class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">code</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+<!-- Map Section -->
+<div class="bg-surface-container rounded-xl overflow-hidden flex flex-col">
+<div class="p-4 bg-surface-container-highest border-b border-outline-variant flex items-center justify-between">
+<h3 class="font-headline-md text-on-surface">Location</h3>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-medium">San Francisco, CA</span>
+</div>
+</div>
+<div class="flex-grow min-h-[400px] relative">
+<!-- Placeholder for Map -->
+<img class="w-full h-full object-cover opacity-80" data-alt="A clean and stylized aerial map view of a modern urban city district. The map features elegant, minimalist topography with a emphasis on soft pastel colors and clear road networks. High-quality digital rendering style that feels informative yet artistic, perfectly fitting the portfolio's creative and technical aesthetic." data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSNHoVRnQnsAjxJPtomJSN6cTg9_1eBny_YZGLSim1PltyH-7h8dGskA6bfr6VGtho2b9RHpq82uHu8LZPHnHGX87FWLKLMgvpKK_0t9i9jgPtTngNUIn2bkdqi3gYi47vKKBhX_kW-8obZ7HbOPlXLLWrpJKa4fdHSZjJ3QpIskZU8AnO7WwGeEhHKef__rU4lssQRYxB1EkTbPywAFSa6wc-4HbuK4es9HIHtWHkAiETIqi5-jtirbk7sBvF6SFn9grz12JW4OY"/>
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-xl animate-bounce">
+<span class="material-symbols-outlined text-on-primary">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg border-t border-outline-variant dark:border-outline bg-surface-container-low dark:bg-inverse-surface mt-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-desktop gap-gutter">
+<div class="font-display-lg text-headline-md font-bold text-on-surface dark:text-inverse-on-surface">DevCreative</div>
+<p class="text-on-surface-variant dark:text-surface-variant text-center md:text-left max-w-sm">
+                © 2024 DevCreative. All Rights Reserved. Built with technical rigor &amp; creative curiosity.
+            </p>
+<div class="flex gap-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hover effect for TopAppBar links
+        const navLinks = document.querySelectorAll('header nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(l => {
+                    l.classList.remove('text-primary', 'dark:text-primary-fixed-dim', 'font-bold', 'border-b-2', 'border-primary', 'dark:border-primary-fixed-dim', 'pb-1');
+                    l.classList.add('text-on-surface-variant', 'dark:text-surface-variant', 'font-medium');
+                });
+                link.classList.add('text-primary', 'dark:text-primary-fixed-dim', 'font-bold', 'border-b-2', 'border-primary', 'dark:border-primary-fixed-dim', 'pb-1');
+                link.classList.remove('text-on-surface-variant', 'dark:text-surface-variant', 'font-medium');
+            });
+        });
+    </script>
+</body></html>
